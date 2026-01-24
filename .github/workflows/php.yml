@@ -25,3 +25,6 @@ jobs:
 
             - name: Lint PHP files
               run: find ./backend -name "*.php" -print0 | xargs -0 -n1 php -l
+              
+            - name: Check code style
+              run: php-cs-fixer fix ./backend --diff
