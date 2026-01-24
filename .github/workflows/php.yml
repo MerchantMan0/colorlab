@@ -33,7 +33,7 @@ jobs:
               run: composer global require friendsofphp/php-cs-fixer
               
             - name: Check code style
-              run: php-cs-fixer fix ./backend --diff --rules=@PSR12 --dry-run=false
+              run: php-cs-fixer fix ./backend --diff --rules=@PSR12
 
             - name: removing artifacts
               run: rm -f .php-cs-fixer.dist.php .php-cs-fixer.cache
