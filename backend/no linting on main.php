@@ -1,9 +1,11 @@
 <?php
 
-class Test{
-    public function foo(){
-        if(true){
-            $x=1;
+class Test
+{
+    public function foo()
+    {
+        if (true) {
+            $x = 1;
         }
     }
 }
