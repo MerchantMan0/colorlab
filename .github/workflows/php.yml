@@ -34,6 +34,9 @@ jobs:
               
             - name: Check code style
               run: php-cs-fixer fix ./backend --diff --rules=@PSR12
+
+            - name: removing artifacts
+              run: rm -f .php-cs-fixer.dist.php .php-cs-fixer.cache
               
             - name: Commit changes
               uses: stefanzweifel/git-auto-commit-action@v5
