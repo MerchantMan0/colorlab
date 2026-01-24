@@ -1,3 +1,9 @@
 <?php
 
-echo    "Hello, World!"      ;
+class Test{
+    public function foo(){
+        if(true){
+            $x=1;
+        }
+    }
+}
