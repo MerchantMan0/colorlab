@@ -30,4 +30,9 @@ jobs:
               run: composer global require friendsofphp/php-cs-fixer
               
             - name: Check code style
-              run: php-cs-fixer fix ./backend --diff
+              run: php-cs-fixer fix ./backend --diff --rules=@PSR12
+              
+            - name: Commit changes
+              uses: stefanzweifel/git-auto-commit-action@v5
+              with:
+                  commit_message: "style: auto-format PHP"
