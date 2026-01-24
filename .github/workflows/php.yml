@@ -1,10 +1,10 @@
 name: PHP Lint
 
 on:
-    push:
-        branches: [ main ]
     pull_request:
         branches: [ main ]
+        paths:
+            - 'backend/**.php'
 
 jobs:
     lint:
@@ -17,7 +17,7 @@ jobs:
             - name: Install PHP
               uses: shivammathur/setup-php@v2
               with:
-                  php-version: '8.5'
+                  php-version: '8.4'
                   coverage: none
 
             - name: Check PHP Version
